@@ -6,15 +6,40 @@
     <title>Meu Painel de Tarefas</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
    <div class="cartao-aplicacao">
+
+<div class="acoes-cabecalho">
+    <button class="botao-icone" popovertarget="meu-popover" title="Ver Funções">
+        <i class="fa-solid fa-circle-question"></i>
+    </button>
+</div>
+
+<div id="meu-popover" popover style="padding: 20px; border-radius: 10px; border: 1px solid #ccc;">
+    <h3>✨ Funções Extras</h3>
+    <p>• Modo Escuro Automático</p>
+    <p>• Limpar Concluídas</p>
+    <p>• Filtros (Todas/Pendentes)</p>
+    <p>• Perfil com Foto</p>
+</div>
+
+    <div class="perfil-usuario">
+        <img src="larafoto23.jpg" alt="Minha Foto" class="foto-perfil">
+        <div class="texto-perfil">
+            <h2>Olá!</h2>
+            <p>Auxiliando a organizar o seu dia 📅✨</p>
+        </div>
+    </div>
+
     <header class="cabecalho-aplicacao">
         <h1>Minhas Tarefas </h1>
         <button class="botao-icone" id="botao-alternar-tema">
             <i class="fa-solid fa-moon"></i>
         </button>
     </header>
+
     <div class="caixa-entrada">
         <input type="text" id="campo-tarefa" placeholder="O que vamos fazer hoje?..." maxlenght="40"> 
         <button class="botao-principal" id="botao-adicionar">
@@ -23,13 +48,26 @@
     </div>
     <ul class="lista-tarefas" id="lista-tarefas">
         <!-- As tarefas serão inseridas dinamicamente via JavaScript -->
-
     </ul>
+
+    <div class="acoes-extras" style="margin-bottom: 10px;">
+        <button id="botao-limpar-concluidas" class="botao-secundario" style="width: 100%; padding: 8px; cursor: pointer;">
+            <i class="fa-solid fa-broom"></i> Limpar Concluídas
+        </button>
+    </div>
+
+    <div class="filtros-tarefas">
+    <button class="botao-filtro ativo" onclick="filtrarTarefas('todas', this)">Todas</button>
+    <button class="botao-filtro" onclick="filtrarTarefas('pendentes', this)">Pendentes</button>
+    <button class="botao-filtro" onclick="filtrarTarefas('concluidas', this)">Concluídas</button>
+</div>
+
     <footer class="rodape-aplicacao">
         <span id="contador-tarefas">0 tarefas na lista</span>
     </footer>
    </div>
 
    <script src="script.js"></script>
+
 </body>
 </html>

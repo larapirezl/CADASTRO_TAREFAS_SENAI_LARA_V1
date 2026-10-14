@@ -150,6 +150,124 @@ input[type="text"]:focus{
     text-align: center;
 }
 
+#botao-limpar-concluidas {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 15px;
+    color: white;            
+    border: none;
+    background-color: #2d3748;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+}
+body #botao-limpar-concluidas:hover {
+    background-color: #31467b;
+}
+
+body.modo-escuro #botao-limpar-concluidas {
+    background-color: #5e6780;
+}
+
+body.modo-escuro #botao-limpar-concluidas:hover {
+    background-color: #50586d;
+}
+
+.perfil-usuario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eaeaea; 
+}
+
+
+.foto-perfil {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;   
+    border: 2px solid #4a90e2; 
+}
+
+.texto-perfil h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+.texto-perfil p {
+    font-size: 13px;
+    margin: 3px 0 0 0;
+    color: #666;
+}
+
+body.modo-escuro .perfil-usuario {
+    border-bottom-color: #333;
+}
+
+body.modo-escuro .texto-perfil h2 {
+    color: #fff;
+}
+
+body.modo-escuro .texto-perfil p {
+    color: #aaa;
+}
+.filtros-tarefas {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.botao-filtro {
+    flex: 1;
+    padding: 6px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.botao-filtro.ativo {
+    background-color: #3775bd;
+    color: white;
+    border-color: #30639b;
+}
+
+
+body.modo-escuro .botao-filtro {
+    background-color: #2a2a2a;
+    color: #ccc;
+    border-color: #444;
+}
+
+body.modo-escuro .botao-filtro.ativo {
+    background-color: #294a6f;
+    color: white;
+}
+
+#meu-popover {
+    background-color: white;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+body.modo-escuro #meu-popover {
+    background-color: #222;
+    color: #fff;
+    border-color: #444;
+}
+
 @keyframes aparecer{
     from{
         opacity: 0; transform: translateY(10px);
